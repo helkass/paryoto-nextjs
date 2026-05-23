@@ -1,0 +1,19 @@
+{
+  "editor.formatOnSave": true,
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never"
+  },
+
+  "eslint.format.enable": false,
+
+  "typescript.tsserver.maxTsServerMemory": 4096,
+
+  "tailwindCSS.classAttributes": [
+    "class",
+    "className"
+  ],
+
+  "github.copilot.editor.enableAutoCompletions": true
+}

@@ -1,0 +1,194 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-custom-color: var(--custom-color);
+}
+:root {
+  --radius: 0.625rem;
+
+  /* Base Background: Abu-abu premium yang bersih (Cool Slate-Zinc) */
+  --background: oklch(0.975 0.004 240);
+  --foreground: oklch(0.18 0.012 240);
+
+  /* Card & Popover: Putih murni agar kontras dan 'pop' di atas background abu-abu */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.012 240);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.012 240);
+
+  /* Primary: Menggunakan base #1B3C53 (Deep Ocean Blue) */
+  --primary: oklch(0.31 0.067 240.4);
+  --primary-foreground: oklch(0.99 0 0);
+
+  /* Secondary: Menggunakan base #456882 (Muted Steel Blue) versi soft */
+  --secondary: oklch(0.93 0.015 240);
+  --secondary-foreground: oklch(0.42 0.065 240);
+
+  /* Muted & Accents: Bersih dan tidak mengalihkan perhatian dari data */
+  --muted: oklch(0.95 0.005 240);
+  --muted-foreground: oklch(0.52 0.015 240);
+  --accent: oklch(0.94 0.01 240);
+  --accent-foreground: oklch(0.21 0.015 240);
+
+  /* Borders & Inputs */
+  --border: oklch(0.89 0.01 240);
+  --input: oklch(0.89 0.01 240);
+  --ring: oklch(0.47 0.075 240); /* Fokus ring menggunakan warna #456882 */
+
+  /* Sidebar Premium: Menggunakan kombinasi warna gelap #1B3C53 untuk kontras dashboard yang mewah */
+  --sidebar: oklch(0.31 0.067 240.4);
+  --sidebar-foreground: oklch(0.95 0.01 240);
+  --sidebar-primary: oklch(0.99 0 0);
+  --sidebar-primary-foreground: oklch(0.31 0.067 240.4);
+  --sidebar-accent: oklch(0.38 0.06 240);
+  --sidebar-accent-foreground: oklch(0.99 0 0);
+  --sidebar-border: oklch(0.25 0.05 240);
+  --sidebar-ring: oklch(0.47 0.075 240);
+
+  /* Data Visualization & Charts (Harmonisasi warna pilihanmu) */
+  --chart-1: oklch(0.31 0.067 240.4); /* #1B3C53 */
+  --chart-2: oklch(0.47 0.075 240); /* #456882 */
+  --chart-3: oklch(0.8 0.025 65); /* #D2C1B6 (Warm Accent) */
+  --chart-4: oklch(0.96 0.015 60); /* #F9F3EF (Slightly adjusted for UI) */
+  --chart-5: oklch(0.62 0.14 210); /* Supporting Cool Blue */
+
+  --destructive: oklch(0.577 0.245 27.325);
+}
+
+.dark {
+  /* Dark Mode Background: Bukan hitam pekat, melainkan Charcoal Slate mewah */
+  --background: oklch(0.16 0.012 241);
+  --foreground: oklch(0.93 0.008 241);
+
+  /* Elevated Surfaces (Card lebih terang sedikit dari background) */
+  --card: oklch(0.21 0.014 241);
+  --card-foreground: oklch(0.93 0.008 241);
+  --popover: oklch(0.21 0.014 241);
+  --popover-foreground: oklch(0.93 0.008 241);
+
+  /* Primary untuk Dark Mode: Ditingkatkan tingkat keterangannya (lightness) agar tidak tenggelam */
+  --primary: oklch(0.55 0.075 240);
+  --primary-foreground: oklch(0.12 0.01 241);
+
+  /* Secondary & Accents */
+  --secondary: oklch(0.25 0.012 241);
+  --secondary-foreground: oklch(0.93 0.008 241);
+  --muted: oklch(0.23 0.012 241);
+  --muted-foreground: oklch(0.62 0.01 241);
+  --accent: oklch(0.25 0.012 241);
+  --accent-foreground: oklch(0.93 0.008 241);
+
+  /* Borders & Inputs */
+  --border: oklch(0.26 0.012 241);
+  --input: oklch(0.26 0.012 241);
+  --ring: oklch(0.55 0.075 240);
+
+  /* Sidebar Dark Mode: Menyatu dengan keanggunan layout keseluruhan */
+  --sidebar: oklch(0.19 0.012 241);
+  --sidebar-foreground: oklch(0.93 0.008 241);
+  --sidebar-primary: oklch(0.55 0.075 240);
+  --sidebar-primary-foreground: oklch(0.12 0.01 241);
+  --sidebar-accent: oklch(0.25 0.012 241);
+  --sidebar-accent-foreground: oklch(0.93 0.008 241);
+  --sidebar-border: oklch(0.26 0.012 241);
+  --sidebar-ring: oklch(0.55 0.075 240);
+
+  /* Charts untuk Dark Mode */
+  --chart-1: oklch(0.55 0.075 240);
+  --chart-2: oklch(0.68 0.07 220);
+  --chart-3: oklch(0.82 0.025 65); /* #D2C1B6 adaptasi dark mode */
+  --chart-4: oklch(0.72 0.11 190);
+  --chart-5: oklch(0.68 0.14 25);
+
+  --destructive: oklch(0.5 0.18 26);
+}
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@utility no-scrollbar {
+  /* Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.overflow-x-auto::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+  background: var(--muted);
+  border-radius: 4px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
+}
+
+/* Untuk Firefox */
+.overflow-x-auto {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) var(--muted);
+}
+
+/* Table cell text truncate untuk konten panjang */
+.table-cell-truncate {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
