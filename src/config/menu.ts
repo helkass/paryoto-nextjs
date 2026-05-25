@@ -201,4 +201,54 @@ export const menuItems = [
     url: "/components/empty-state",
     icon: Projector,
   },
+  {
+    title: "Gauge Chart",
+    url: "/components/gauge-chart",
+    icon: Projector,
+  },
+  {
+    title: "Heatmap",
+    url: "/components/heatmap",
+    icon: Projector,
+  },
+  {
+    title: "Treemap",
+    url: "/components/treemap",
+    icon: Projector,
+  },
+  {
+    title: "Funnel Chart",
+    url: "/components/funnel-chart",
+    icon: Projector,
+  },
+  {
+    title: "Sparkline",
+    url: "/components/sparkline",
+    icon: Projector,
+  },
+  {
+    title: "Bullet Chart",
+    url: "/components/bullet-chart",
+    icon: Projector,
+  },
+  {
+    title: "Waterfall Chart",
+    url: "/components/waterfall-chart",
+    icon: Projector,
+  },
+  {
+    title: "Sankey",
+    url: "/components/sankey",
+    icon: Projector,
+  },
+  {
+    title: "Timeline Chart",
+    url: "/components/timeline-chart",
+    icon: Projector,
+  },
+  {
+    title: "KPI Widget",
+    url: "/components/kpi-widget",
+    icon: Projector,
+  },
 ];
